@@ -20,7 +20,7 @@ function App() {
   }, [])
 
   const insertRow = async (todoText) => {
-    const { data, error } = await supabaseClient
+    const { data } = await supabaseClient
       .from('items')
       .insert({ todo_text: todoText })
       .select()
